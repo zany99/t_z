@@ -1,0 +1,248 @@
+$color_dark1: #333
+$color_dark2: #231f20
+$color_icon:#2b2b2b
+$color_btn:#cb6f6d
+$color_hover:#ea4c89
+
+.wrapper
+	max-width: 1600px
+	width: 100%
+	background-color: #fff
+	margin: 0 auto
+header
+	width: 100%
+	padding: 80px 60px	
+	display: flex
+	align-items: center
+	justify-content: space-between
+.header__burger
+	height: 22px
+	width: 25px
+	position: relative
+	z-index: 9999
+	span,
+	&:before,
+	&:after
+		background-color: $color_dark1
+		height: 3px
+		width: 100%
+		position: absolute
+		left:0
+	&:before,
+	&:after
+		content: ""
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+	span
+		top:50%
+		transform: translate(0px,-50%)
+.title
+	width: 100%
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: center
+	background-color: $color_dark2
+	text-transform: uppercase
+	padding: 95px 30px
+	&__main
+		color:#fff
+		font-weight: 700
+		font-size: 38px
+		line-height: 55px
+	&__sub
+		font-size: 18px
+		color: #777
+		font-weight: 400
+		line-height:55px
+article
+	width: 100%
+	.portfolio
+		width: 100%
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: repeat(3, 400px)
+		&__block
+			position: relative
+			transition: all 0.3s ease 0s
+			img
+				width: 100%
+				height: 400px
+		&__overlay
+			position: absolute
+			top:0
+			left:0
+			height:100%
+			width:100%
+			background-color: rgba(202,87,84,0.5)
+			display: none
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			color: #fff
+			.portfolio__container
+				display: flex
+				flex-direction: column
+				gap:38px
+				.portfolio__text
+					font-size: 16px
+					font-weight: 400
+					i
+						margin-right: 10px
+				.portfolio__title
+					font-size: 24px
+					font-weight: 400
+				.portfolio__launch
+					font-size: 14px
+					text-transform: uppercase
+					font-weight: 400
+					i
+						margin-right: 10px
+.portfolio__block:hover .portfolio__overlay
+	display: flex
+
+.button
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 80px 30px
+	.btn
+		border: none
+		background-color: $color_btn
+		padding: 3px 52.5px
+		font-size: 16px
+		line-height: 36px
+		font-weight: 400
+		color:#fff
+		border-radius: 20px
+.social
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	border-top: 2px solid #f7f7f7
+	border-bottom: 2px solid #f7f7f7
+	&__block
+		padding: 80px 110px
+		font-size: 48px
+		&:hover
+			background-color: $color_hover
+.contact
+	width: 100%
+	display: flex
+	justify-content: space-between
+	
+	&__block
+		flex: 1 1 auto
+		width: 33.3%
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 80px 60px 60px 60px 
+		text-align: center
+		gap:23px
+		&:nth-child(2)
+			background-color: $color_dark1
+			color:#fff
+	&__title
+		font-size: 22px
+		color:$color_dark1
+		font-weight: 400
+		display: flex
+		align-items: center
+		flex-direction: column
+		gap:18px
+		margin-bottom: 25px
+		span
+			display: block
+			height: 2px
+			width: 80%
+			background-color: #ccc
+			text-align: center
+			&:nth-child(2)
+				background-color: #fff
+	&__title-dark
+		color:#fff
+	&__address,
+	&__email,
+	&__phone,
+	&__site a
+		font-size: 18px
+		color: #777
+		font-weight: 400
+	&__text
+		font-size: 18px
+		line-height: 28px
+		color:#fff
+		font-weight: 400
+		span
+			border-bottom: 0.5px solid $color_btn
+	&__pic
+		width: 100%
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-rows: 100px 100px
+		grid-auto-flow: column
+		gap:10px
+	&__img
+		background-color: #ccc
+			
+footer
+	padding: 11px 100px 11px 135px
+	font-size: 16px
+	font-weight: 400
+	color:#fff
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background-color: $color_dark2
+	nav
+		ul
+			display: flex
+			gap:10px
+			align-items: center
+			li
+				list-style-type: none
+				a
+					color:#fff
+					font-size: 16px
+					line-height: 36px
+					font-weight: 400
+					text-decoration: none
+.menu
+	width: 100%
+	height: 100%
+	z-index: 9998
+	display: none
+	position: absolute
+	top:200px 
+	left: 0
+	background-color: $color_dark1
+	opacity: 0.8
+	padding: 50px 50px
+	li
+		list-style-type: none
+		a 
+			color:#fff
+			font-size: 28px
+@media screen and (max-width: 1024px)
+	article
+		.portfolio
+			display: flex
+			flex-direction: column
+	.social__block
+		padding: 35px
+	.contact
+		flex-direction: column
+		&__block
+			width: 100%
+	footer
+		padding-left:30px
+		padding-right: 15px
+		nav
+			display: none
